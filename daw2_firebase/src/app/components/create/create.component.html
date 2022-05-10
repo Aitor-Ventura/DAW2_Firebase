@@ -1,0 +1,17 @@
+<div class="d-grip gap-2 mt-4">
+  <a routerLink="" class="btn btn-primary" type="button">Home</a>
+  <a routerLink="/create" class="btn btn-primary" type="button">Create</a>
+</div>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-3">
+    <label class="form-label">Nickname</label>
+    <input formControlName="userNickname" type="text" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Realname</label>
+    <input formControlName="userRealname" type="text" class="form-control" required>
+  </div>
+  <button [disabled]="!userForm.valid" type="submit" class="btn btn-primary">Submit</button>
+</form>

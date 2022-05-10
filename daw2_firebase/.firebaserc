@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-daw2": {
+      "hosting": {
+        "daw2_firebase": [
+          "fir-daw2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-daw2"
+  }
+}

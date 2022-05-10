@@ -1,0 +1,23 @@
+<div class="d-grip gap-2 mt-4">
+  <a routerLink="" class="btn btn-primary" type="button">Home</a>
+  <a routerLink="/create" class="btn btn-primary" type="button">Create</a>
+</div>
+
+<table class="table table-hover table-striped">
+  <thead class="bg dark text-white">
+    <tr>
+      <th>Nickname</th>
+      <th>Realname</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of Users">
+      <td> {{ user.userNickname }} </td>
+      <td> {{ user.userRealname }} </td>
+      <td>
+        <button routerLink="/edit/{{user.id}}" class="btn btn-outline-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button (click)="deleteRow(user)" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
